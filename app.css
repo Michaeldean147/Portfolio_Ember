@@ -1,5 +1,5 @@
 #myPic{
-  padding-left: 38px;
+  padding-left: 25px;
   background-color: #C8C8C8;
 }
 
@@ -44,4 +44,7 @@
 
 #myWork{
   margin-left: 60px;
+}
+#homeInfo{
+  padding-left: 132px;
 }
