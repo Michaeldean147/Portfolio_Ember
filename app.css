@@ -1,0 +1,47 @@
+#myPic{
+  padding-left: 38px;
+  background-color: #C8C8C8;
+}
+
+#indexLink{
+ margin-right: 10px;
+ margin-top: 5px;
+}
+
+#resumeLink{
+ margin-top: 5px;
+}
+
+#portLink{
+ margin-right: 10px;
+ margin-top: 5px;
+}
+
+#mainWell{
+  margin-left: 94px;
+}
+
+
+#Headers{
+  text-decoration: underline;
+}
+
+#myGit{
+  margin-left: 60px;
+}
+
+#myHeroku{
+  margin-left: 60px;
+}
+
+#myEdu{
+  margin-left: 60px;
+}
+
+#mySkills{
+  margin-left: 60px;
+}
+
+#myWork{
+  margin-left: 60px;
+}
