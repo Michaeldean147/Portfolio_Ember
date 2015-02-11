@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title></title>
+    <script src="libs/jquery-1.10.2.js"></script>
+    <script src="libs/handlebars-v3.0.0.js"></script>
+    <script src="libs/ember-1.10.0.debug.js"></script>
+    <script src="libs/ember-template-compiler-1.10.0.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "app.css">
+  </head>
+  <body>
+
+
+
+    <script type="text/x-handlebars">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid display-inline">
+          <ul class="nav navbar-nav">
+            <li id="indexLink"><h4>{{#link-to 'index'}}Home{{/link-to}}</h4></li>
+            <li id="portLink"><h4>{{#link-to 'Portfolio'}}Portfolio{{/link-to}}</h4></li>
+            <li id="resumeLink"><h4>{{#link-to 'Resume'}}Resume{{/link-to}}</h4></li>
+          </ul>
+        </div>
+      </nav>
+      <div>{{outlet}}</div>
+    </script>
+
+    <script type="text/x-handlebars" id="Portfolio">
+      <div id="mainWell"class= "container well col-md-10">
+        <h1>My Portfolio</h1>
+        <div id="myGit">
+          <h2 id="Headers">GitHub</h2>
+          <a href="https://github.com/Michaeldean147" target="_blank"><h4>MichaelDean147</h4></a>
+          <h3 id="Headers">Notable GitHub Project Links</h3>
+          <a href="https://github.com/Michaeldean147/GovTrackerApp" target="_blank"><h4>GovTracker Repository</h4></a>
+          <a href="https://github.com/Michaeldean147/OMDB_Single_Page_App" target="_blank"><h4>Movie Search App Repository</h4></a>
+          <a href="http://michaeldean147.github.io/Drums-N-Loops/" target="_blank"><h4>Drums N' Loops</h4></a>
+        </div>
+
+        <div id="myHeroku">
+          <h2 id="Headers">Heroku Links</h2>
+          <a href="https://still-hamlet-6696.herokuapp.com/" target="_blank"><h4>GovTracker</h4></a>
+          <a href="https://lit-brook-2436.herokuapp.com/" target="_blank"><h4>gCamp</h4></a>
+          <a href="https://pacific-caverns-6821.herokuapp.com/" target="_blank"><h4>ChowSpana</h4></a>
+        </div>
+
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" id="index">
+      <div id= "mainWell" class= "container well col-md-10">
+        <h1>Home</h1><br>
+        <<div class= "well col-sm-5" id="myPic">
+          <img src="my_pic.jpg"/>
+        </div>
+
+        <div id="homeInfo" class="col-md-7">
+          <h3>Welcome To My Page, Use The Links To:</h3>
+          <h4><li>View My Portfolio</li></h4>
+          <h4><li>View My Resume</li></h4>
+          <h4><li>Return To This Page</li></h4>
+        </div>
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" id="Resume">
+      <div id="mainWell" class= "container well col-md-10">
+        <h1>My Resume</h1>
+        <div id="myEdu">
+          <h2 id="Headers">Education</h2>
+
+        </div>
+
+        <div id="myWork">
+          <h2 id="Headers">Work Experience</h2>
+
+        </div>
+
+        <div id="mySkills">
+          <h2 id="Headers">Skills</h2>
+
+        </div>
+
+      </div>
+    </script>
+
+
+    <script src="js/application.js"></script>
+    <script src="js/router.js"></script>
+  </body>
+</html>
