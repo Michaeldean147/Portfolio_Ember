@@ -1,5 +1,9 @@
 #myPic{
+<<<<<<< HEAD
   padding-left: 38px;
+=======
+  padding-left: 25px;
+>>>>>>> master
   background-color: #C8C8C8;
 }
 
@@ -45,3 +49,9 @@
 #myWork{
   margin-left: 60px;
 }
+<<<<<<< HEAD
+=======
+#homeInfo{
+  padding-left: 132px;
+}
+>>>>>>> master
