@@ -1,6 +1,10 @@
 #myPic{
-  padding-left: 38px;
+  padding-left: 24px;
   background-color: #C8C8C8;
+}
+
+#homeInfo{
+  padding-left: 132px;
 }
 
 #indexLink{
