@@ -10,8 +10,6 @@
   </head>
   <body>
 
-
-
     <script type="text/x-handlebars">
       <nav class="navbar navbar-default">
         <div class="container-fluid display-inline">
@@ -25,25 +23,34 @@
       <div>{{outlet}}</div>
     </script>
 
+    <script type="text/x-handlebars" id="Portfolio/project">
+      <div id="mainWell"class= "container col-md-6">
+        <h2 id= "Headers">{{name}}</h2>
+        <a {{bind-attr href=gitRepo}} target="_blank"><h3>GitHub Repo</h3></a>
+        <a {{bind-attr href=appLink}} target="_blank"><h3>View This App</h3></a><br>
+        <h4>{{#link-to 'Portfolio'}}Refresh Portfolio{{/link-to}}</h4>
+      </div>
+    </script>
+
+    <script type="text/x-handlebars" id="Portfolio/index">
+      <h3 class="col-md-12">Click A Project To View It's Information!</h3>
+    </script>
+
     <script type="text/x-handlebars" id="Portfolio">
       <div id="mainWell"class= "container well col-md-10">
         <h1>My Portfolio</h1>
-        <div id="myGit">
-          <h2 id="Headers">GitHub</h2>
-          <a href="https://github.com/Michaeldean147" target="_blank"><h4>MichaelDean147</h4></a>
-          <h3 id="Headers">Notable GitHub Project Links</h3>
-          <a href="https://github.com/Michaeldean147/GovTrackerApp" target="_blank"><h4>GovTracker Repository</h4></a>
-          <a href="https://github.com/Michaeldean147/OMDB_Single_Page_App" target="_blank"><h4>Movie Search App Repository</h4></a>
-          <a href="http://michaeldean147.github.io/Drums-N-Loops/" target="_blank"><h4>Drums N' Loops</h4></a>
+        <div id="myProjects">
+          <div class=" col-md-3">
+          <h2 id="Headers">Projects</h2>
+          {{log model}}
+          {{#each project in model}}
+            {{#link-to "Portfolio.project" project}}
+              <li><h4>{{project.name}}</h4></li>
+            {{/link-to}}
+          {{/each}}
+          </div>
+          <div class="col-md-7">{{outlet}}</div>
         </div>
-
-        <div id="myHeroku">
-          <h2 id="Headers">Heroku Links</h2>
-          <a href="https://still-hamlet-6696.herokuapp.com/" target="_blank"><h4>GovTracker</h4></a>
-          <a href="https://lit-brook-2436.herokuapp.com/" target="_blank"><h4>gCamp</h4></a>
-          <a href="https://pacific-caverns-6821.herokuapp.com/" target="_blank"><h4>ChowSpana</h4></a>
-        </div>
-
       </div>
     </script>
 
@@ -68,24 +75,21 @@
         <h1>My Resume</h1>
         <div id="myEdu">
           <h2 id="Headers">Education</h2>
-
         </div>
 
         <div id="myWork">
           <h2 id="Headers">Work Experience</h2>
-
         </div>
 
         <div id="mySkills">
           <h2 id="Headers">Skills</h2>
-
         </div>
-
       </div>
     </script>
 
 
     <script src="js/application.js"></script>
     <script src="js/router.js"></script>
+    <script src="js/routes/project.js"></script>
   </body>
 </html>

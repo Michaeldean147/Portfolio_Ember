@@ -1,5 +1,5 @@
 #myPic{
-  padding-left: 24px;
+  padding-left: 35px;
   background-color: #C8C8C8;
 }
 
@@ -30,13 +30,10 @@
   text-decoration: underline;
 }
 
-#myGit{
+#myProjects{
   margin-left: 60px;
 }
 
-#myHeroku{
-  margin-left: 60px;
-}
 
 #myEdu{
   margin-left: 60px;
